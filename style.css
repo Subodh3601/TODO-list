@@ -1,0 +1,341 @@
+/*Body-------------------------------------------------------------------*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*Outer Container --------------------------------------------------------------*/
+#outercontainer {
+    width: 80vw;
+    height: 80vh;
+    border: 1px solid black;
+    margin: 5%;
+    background-color: bisque;
+    border-radius: 1em;
+    position: relative;
+}
+
+/*Inner Container-------------------------------------------------------------*/
+#innercontainer {
+    width: 60%;
+    height: 80%;
+    margin: 5%;
+    border: 1px solid black;
+    background-color: white;
+    box-shadow: 0.1em 0.1em 01em 0.1em goldenrod;
+    border-radius: 1em;
+
+
+
+}
+
+/*Input Text------------------------------------------------------------------*/
+#inputbox {
+    height: 17%;
+    width: 100%;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+[type="text"] {
+    position: absolute;
+    border-radius: 1vh;
+    padding: 0.5em;
+    padding-left: 7%;
+    padding-right: 7%;
+    font-size: 150%;
+    margin-top: 3%;
+    background-color: gainsboro;
+}
+
+[type="text"]:hover {
+    background-color: beige;
+}
+
+#inputbox img {
+    position: absolute;
+    width: 6%;
+    left: 2vw;
+    top: 2vh;
+}
+
+
+#inputtextbutton {
+    position: absolute;
+    transform: translate(600%, 30%);
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    margin-top: 2em;
+    /* visibility: hidden; */
+}
+
+/* [type="text"]:focus+#inputtextbutton {
+    visibility: visible;
+} */
+
+#inputtextbutton:hover {
+    background-color: transparent;
+}
+
+/*Complete All and Clear all ----------------------------------------------------*/
+#completeall {
+    height: 8%;
+    width: 100%;
+
+}
+
+#completeallbutton {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.5em;
+    margin-left: .4em;
+    margin-top: 0.25em;
+}
+
+#completeallbutton:hover {
+    color: green;
+}
+
+#clearcompletedbutton {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    float: right;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 0.25em;
+    margin-right: 0.4em;
+}
+
+#clearcompletedbutton:hover {
+    color: red;
+}
+
+/*task list----------------------------------------------*/
+#tasklist {
+
+    width: 100%;
+    height: 13em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    margin-left: 3em;
+    /* list-style: none; */
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 6px 4px 6px 30px;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+ul li:nth-child(even) {
+    background: gainsboro;
+}
+
+ul li:hover {
+    background: green;
+    color: aliceblue;
+}
+
+/*Close button*/
+
+.close {
+    border: 1px solid red;
+    background-color: red;
+    /* visibility: hidden; */
+    border-radius: 50%;
+    position: absolute;
+    right: 1em;
+    top: 0.3em;
+}
+
+/* .close:hover {
+    visibility: visible;
+} */
+
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+
+
+
+/*footer---------------------------------------------------------*/
+#footer {
+
+    height: auto;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+#taskleft {
+    margin-top: 0.5em;
+    margin-left: 1em;
+}
+
+#completed {
+    float: right;
+    margin-top: -2.5em;
+    margin-right: 1em;
+}
+
+#totaltask {
+    float: right;
+    margin-top: -2.5em;
+    margin-right: 8em;
+}
+
+
+/* Media Query-----------------------------------------------------------*/
+
+@media screen and (max-width : 1280px) {
+    [type="text"] {
+        /*input text------*/
+        font-size: 100%;
+        padding: 0.5em 3em 0.5em;
+
+        margin-top: 2.5%;
+    }
+
+    #inputtextbutton {
+        /* input button image-----*/
+        font-size: 0.7em;
+        transform: translate(570%, 10%);
+
+    }
+
+    #completeallbutton {
+        text-align: center;
+        font-size: 1.2em;
+        margin-top: 0.25em;
+        margin-left: .25em;
+    }
+
+    #clearcompletedbutton {
+        text-align: center;
+        font-size: 1.2em;
+        margin-top: 0.25em;
+    }
+
+    #footer {
+        margin-top: 0%;
+
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    #inputbox img {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width : 700px) {
+    [type="text"] {
+        /*input text------*/
+        font-size: 100%;
+        padding: 0.5em;
+        margin-top: 5%;
+    }
+
+    #inputtextbutton {
+        /* input button image-----*/
+        font-size: 0.5em;
+        transform: translate(600%, 30%);
+    }
+
+    #completeallbutton {
+        text-align: center;
+        font-size: 1em;
+        margin-top: 0.5em;
+        margin-left: .25em;
+    }
+
+    #clearcompletedbutton {
+        text-align: center;
+        font-size: 1em;
+        margin-top: 0.5em;
+    }
+
+    #footer {
+        margin-top: 0%;
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 30%;
+
+    }
+
+    .taskcount {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        /* border: 2px dotted ; */
+    }
+
+    #taskleft {
+        /* margin-top: 0.5em; */
+        margin-left: 0.5em;
+
+    }
+
+    #completed {
+
+        margin-top: 0.2em;
+        margin-left: 0.5em;
+        /* margin-right: 0.5em; */
+    }
+
+    #totaltask {
+
+        margin-top: 0.2em;
+        margin-left: 0.5em;
+        /* margin-right: 8em; */
+    }
+
+    #inputbox img {
+        visibility: visible;
+        top: 21em;
+        left: 10em;
+        width: 25%;
+        height: 150%;
+    }
+
+    #innercontainer {
+        width: 60%;
+        height: 90%;
+    }
+
+}
+
+/*feature list--------------------------------------------*/
+#features{
+    border: 1px solid;
+    width: 30%;
+    height: 63vh;
+    position: absolute;
+    top: 4em;
+    right: 2em;
+    background-color: thistle;
+    border-radius: 1em;
+}
+
+#featuresheading{
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<section id="outercontainer">
+    <section id="innercontainer">
+
+        <!-- Input Text and Button   ----------------------------->
+        <div id="inputbox">
+            <input id="myinput" type="text" placeholder="Type your todo list">
+            <img src="https://cdn.pixabay.com/photo/2022/05/22/17/22/to-do-7214069_640.png">
+            <button id="inputtextbutton" type="button"><i class="fa-regular fa-circle-check fa-2x"></i></i></button>
+        </div>
+
+        <!--Complete All Task and Clear Complete-------------------->
+        <div id="completeall">
+            <button id="completeallbutton" type="button"><i class="fa-solid fa-list-check"></i> All Task</button>
+            <button id="clearcompletedbutton" type="button"><i class="fa-regular fa-circle-xmark"></i> Clear
+                All</button>
+            <hr>
+        </div>
+
+        <!--Task list---------------------------------->
+        <section id="tasklist">
+            <ul id="myul">
+
+            </ul>
+
+
+        </section>
+
+
+        <!--Footer------------------------------->
+        <footer id="footer">
+            <hr>
+            <div class="taskcount">
+                <div id="taskleft">
+                    <p>Tasks left:- <span id="taskleftcount">0</span></p>
+                </div>
+                <div id="completed">
+                    <p>Completed:- <span id="completedcount">0</span></p>
+                </div>
+                <div id="totaltask">
+                    <p>Total task:- <span id="totaltaskcount">0</span> </p>
+                </div>
+
+            </div>
+        </footer>
+
+
+
+
+
+
+
+
+
+    </section>
+    <section id="features">
+        <div id="featuresheading"><b><u>Features</u></b></div>
+        <ul id="task">
+            <li>Add task to list</li>
+            <li>Blank input is alrted</li>
+            <li>Add button to add task</li>
+            <li>Delete button to delete the task</li>
+            <li>Total task/ task completed/ task pending</li>
+            <li>Select all task as complete</li>
+            <li>Clear the list to delete all task</li>
+        </ul>
+    </section>
+</section>
+
+<script src="https://kit.fontawesome.com/22376e1841.js" crossorigin="anonymous"></script>
+<script src="script1.js"></script>
+</body>
+
+</html>
